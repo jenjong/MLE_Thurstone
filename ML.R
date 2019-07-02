@@ -6,9 +6,9 @@ source("./lib/conv.R")
 p = 5
 mu = seq(5,0, length = p)
 Sigma = diag(1,p)
-n = 100
+n = 200
 verbose = T
-set.seed(1)
+#set.seed(1)
 z = mvrnorm(n, mu, Sigma)
 # pi_mat denotes the ranks of items
 pi_mat =t(apply(z, 1, order, decreasing = T))
@@ -23,19 +23,13 @@ wvec = convToW_fun(fit_mat)
 fit_model = glm.fit(x = d_mat$x, y=d_mat$y, 
         weight = wvec, family = binomial(link='probit'),
         intercept = FALSE)
-fit_model$coefficients
-
-
-
-
-
-mu_e = seq(5,0, length = p)
+mu_e = c(fit_model$coefficients*sqrt(2),0) # note: probit reg z~N(0, 1/sqrt(2))
 Sig_e = diag(1,p)
 Omg_e = solve(Sig_e)
 
 
-# sampling
-i = 1 ; length(rank_id)
+# sampling function
+i = 2 ; length(rank_id)
 idx = which(rank_index == i)
 x = pi_mat[idx[1],]
 
