@@ -17,6 +17,18 @@ rank_id = rankIndex_list$rank_id
 rank_index = rankIndex_list$rank_index
 
 # initialization:: pairwise comparisons (package)
+fit_mat = convToMat_fun(pi_mat)
+d_mat = genDesignR_fun(p)
+wvec = convToW_fun(fit_mat)
+fit_model = glm.fit(x = d_mat$x, y=d_mat$y, 
+        weight = wvec, family = binomial(link='probit'),
+        intercept = FALSE)
+fit_model$coefficients
+
+
+
+
+
 mu_e = seq(5,0, length = p)
 Sig_e = diag(1,p)
 Omg_e = solve(Sig_e)
