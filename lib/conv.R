@@ -83,6 +83,7 @@ convToMat_fun = function(pi_mat)
     {
       for (k in (j+1):length(z))
       {
+        # ix1: the index of item with rank j
         ix1 = z[j] ; ix2 = z[k]
         Nmat[ix1,ix2] = Nmat[ix2,ix1] = Nmat[ix1,ix2] + 1
         Wmat[ix1,ix2] = Wmat[ix1,ix2] + 1
