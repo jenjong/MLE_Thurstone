@@ -10,6 +10,7 @@ E_fun.prob= function(rankIndex_list, mu_e, Omega_e,
   rank_id = rankIndex_list$rank_id
   rank_index = rankIndex_list$rank_index
   zmat_mean = matrix(0,length(rank_id),p)
+  zmat_cov = list()
   for (i in 1:length(rank_id))
   {
     # 
@@ -64,18 +65,20 @@ E_fun.prob= function(rankIndex_list, mu_e, Omega_e,
       }
     }
     zmat_mean[i,] = colMeans(zmat)
+    zmat_cov[[i]] = (t(zmat)%*%zmat)/restore_num
   }
   
   Ez = matrix(0, n, p)
-  
+  Covz = vector(mode = 'list', length = n)
   for (i in 1:length(rank_id))
   {
     idx = which(rank_index == i)
     for (j in idx)
     {
-      Ez[j,] = zmat_mean[i,]  
+      Ez[j,] = zmat_mean[i,]
+      Covz[[j]] = zmat_cov[[i]]
     }
   }
-  return(Ez)
+  return(list(Ez = Ez, Covz = Covz))
 }
 

@@ -4,10 +4,10 @@ setwd("~/GitHub/MLE_Thurstone")
 if (!require(truncnorm)) {install.packages("truncnorm") ; library(truncnorm)}
 source("./lib/conv.R")
 source("./lib/em_lib.R")
-p = 4
+p = 5
 mu = seq(5,0, length = p)
 Sigma = diag(1,p)
-n = 10000
+n = 100
 burn_num = 1e+2
 restore_num = 5e+3
 verbose = T
@@ -31,12 +31,20 @@ Sig_e = diag(1,p)
 Omg_e = solve(Sig_e)
 # sampling function
 
-Ez = E_fun.prob(rankIndex_list, mu_e, Omg_e,
+E_fit = E_fun.prob(rankIndex_list, mu_e, Omg_e,
            burn_num, restore_num, verbose)
 ## 
-mu_e = colMeans(Ez)
-Sig_e = cov(Ez)
+mu_e = colMeans(E_fit$Ez)
+for (j in 1:n)
+{
+  if (j == 1) Sig_e = E_fit$Covz[[j]] else Sig_e = Sig_e + E_fit$Covz[[j]] 
+}
+Sig_e = Sig_e/n
+Sig_e = Sig_e - mu_e%*%t(mu_e)
 Omg_e = solve(Sig_e)
+
+
+
 
 # debugging
 pi_hat =t(apply(zmat_mean, 1, order, decreasing = T))
