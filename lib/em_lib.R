@@ -1,7 +1,7 @@
 # return expectation of latent variables 
 # input: rankIndex_list(in conv.R)
 # output: expectation of latent variables 
-E_fun.prob= function(rankIndex_list, mu_e, Omega_e,
+E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
                      burn_num, restore_num,
                      verbose = T)
 {
@@ -18,10 +18,17 @@ E_fun.prob= function(rankIndex_list, mu_e, Omega_e,
     idx = which(rank_index == i)
     x = pi_mat[idx[1],]
     # set an initial of z
+    init_iter = 1
     while(T)
     {
-      z = mvrnorm(1, mu_e, diag(1,p))  
+      if (init_iter > 1000) 
+      {
+        z = mvrnorm(1, mu_e, diag(1,p))
+      } else {
+        z = mvrnorm(1, mu_e, Sig_e)    
+      }
       zo = order(z, decreasing = T)
+      init_iter = init_iter + 1
       if (!any(x != zo)) 
       {
         if (verbose) cat("Initialization is complete!\n")
