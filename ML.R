@@ -1,6 +1,12 @@
 rm(list = ls()); gc()
 library(MASS)
-setwd("~/GitHub/MLE_Thurstone")
+if (Sys.info=="Linux") 
+{
+  setwd("~/Documents/GitHub/MLE_Thurstone")  
+} else {
+  setwd("~/GitHub/MLE_Thurstone")  
+}
+
 if (!require(truncnorm)) {install.packages("truncnorm") ; library(truncnorm)}
 source("./lib/conv.R")
 source("./lib/em_lib.R")
