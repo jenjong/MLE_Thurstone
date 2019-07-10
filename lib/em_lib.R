@@ -83,7 +83,10 @@ E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
     for (j in idx)
     {
       Ez[j,] = zmat_mean[i,]
-      Covz[[j]] = zmat_cov[[i]]
+      Ez[j,p] = 0
+      tmp = zmat_cov[[i]]
+      tmp[,p] = 0 ; tmp[p,] = 0 ; tmp[p,p] = 1
+      Covz[[j]] = tmp
     }
   }
   return(list(Ez = Ez, Covz = Covz))

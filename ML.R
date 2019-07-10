@@ -1,6 +1,6 @@
 rm(list = ls()); gc()
 library(MASS)
-if (Sys.info=="Linux") 
+if (Sys.info()[1]=="Linux") 
 {
   setwd("~/Documents/GitHub/MLE_Thurstone")  
 } else {
@@ -13,10 +13,11 @@ source("./lib/em_lib.R")
 p = 5
 mu = seq(5,0, length = p)
 Sigma = matrix(0.5, p, p)
+Sigma[,p] =  Sigma[p,] = 0
 diag(Sigma) = 1 
 
-n = 100
-burn_num = 1e+2
+n = 500
+burn_num = 1e+3
 restore_num = 5e+3
 verbose = T
 #set.seed(1)
@@ -38,7 +39,7 @@ mu_e = c(fit_model$coefficients*sqrt(2),0) # note: probit reg z~N(0, 1/sqrt(2))
 Sig_e = diag(1,p)
 Omg_e = solve(Sig_e)
 # sampling function
-for (iter in 1:1000)
+for (iter in 1:100)
 {
   cat("outer iter:", iter ,'\n')
   E_fit = E_fun.prob(rankIndex_list, mu_e, Sig_e, Omg_e,
@@ -54,22 +55,4 @@ for (iter in 1:1000)
   Omg_e = solve(Sig_e)
   cat("Frobenius norm:", sum((Sigma-Sig_e)^2), '\n')
 }
-
-
-
-
-# debugging
-pi_hat =t(apply(zmat_mean, 1, order, decreasing = T))
-pi_mat
-for (i in 1:length(rank_id))
-{
-  # iteration 
-  cat("#iter: ", i, '\n')
-  idx = which(rank_index == i)
-  x = pi_mat[idx[1],]
-  tx = pi_hat[i,]
-  if (sum(x == tx)!= p ) stop()
-}
-
-
 
