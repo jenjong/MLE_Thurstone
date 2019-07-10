@@ -16,10 +16,10 @@ Sigma = matrix(0.5, p, p)
 Sigma[,p] =  Sigma[p,] = 0
 diag(Sigma) = 1 
 
-n = 500
-burn_num = 1e+3
-restore_num = 5e+3
-verbose = T
+n = 100
+burn_num = 1e+2
+restore_num = 5e+4
+verbose = F
 #set.seed(1)
 z = mvrnorm(n, mu, Sigma)
 # pi_mat denotes the index of items
