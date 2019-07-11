@@ -36,9 +36,11 @@ rankIndex_fun = function(pi_mat)
     }
   }
   rank_index_t = factor(rank_index_t)
+  freq_v = table(rank_index_t)/n
   rank_id = levels(rank_index_t)
   rank_index = as.integer(rank_index_t)
-  return(list(rank_id = rank_id, rank_index = rank_index))
+  return(list(rank_id = rank_id, rank_index = rank_index,
+              freq_v = freq_v))
 }
 
 # genDesignR_fun
