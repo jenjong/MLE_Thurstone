@@ -10,15 +10,15 @@ if (Sys.info()[1]=="Linux")
 if (!require(truncnorm)) {install.packages("truncnorm") ; library(truncnorm)}
 source("./lib/conv.R")
 source("./lib/em_lib.R")
-p = 5
-mu = seq(5,0, length = p)
-Sigma = matrix(0.5, p, p)
+p = 3
+mu = seq(2,0, length = p)
+Sigma = matrix(0.1, p, p)
 Sigma[,p] =  Sigma[p,] = 0
 diag(Sigma) = 1 
 
-n = 100
+n = 10000
 burn_num = 1e+2
-restore_num = 5e+4
+restore_num = 1e+3
 verbose = F
 #set.seed(1)
 z = mvrnorm(n, mu, Sigma)
@@ -45,14 +45,11 @@ for (iter in 1:100)
   E_fit = E_fun.prob(rankIndex_list, mu_e, Sig_e, Omg_e,
                      burn_num, restore_num, verbose)
   ## 
-  mu_e = colMeans(E_fit$Ez)
-  for (j in 1:n)
-  {
-    if (j == 1) Sig_e = E_fit$Covz[[j]] else Sig_e = Sig_e + E_fit$Covz[[j]] 
-  }
-  Sig_e = Sig_e/n
-  Sig_e = Sig_e - mu_e%*%t(mu_e)
+  mu_e = E_fit$Ez
+  ZZ = E_fit$Covz
+  Sig_e = ZZ - mu_e%*%t(mu_e)
   Omg_e = solve(Sig_e)
   cat("Frobenius norm:", sum((Sigma-Sig_e)^2), '\n')
+  cat("mu_e:", mu_e, '\n')
 }
 

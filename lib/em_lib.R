@@ -9,8 +9,9 @@ E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
   n = nrow(pi_mat)
   rank_id = rankIndex_list$rank_id
   rank_index = rankIndex_list$rank_index
-  zmat_mean = matrix(0,length(rank_id),p)
-  zmat_cov = list()
+  freq_v = rankIndex_list$freq_v
+  Ez = rep(0, p)
+  Covz = matrix(0,p,p)
   for (i in 1:length(rank_id))
   {
     # 
@@ -23,7 +24,7 @@ E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
     {
       if (init_iter > 1000) 
       {
-        z = mvrnorm(1, mu_e, diag(1,p))
+        z = mvrnorm(1, mu_e, diag(5,p))
       } else {
         z = mvrnorm(1, mu_e, Sig_e)    
       }
@@ -54,7 +55,8 @@ E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
     # restore
     j_k = 1
     j_c = 1
-    zmat = matrix(0, restore_num, p)
+    zm = rep(0,p)
+    zc = matrix(0,p,p)
     for (j in rep(x, restore_num))
     {
       m = mu_e[j]- sum(Omg_e[j,][-j]*(z[-j] - mu_e[-j]))/Omg_e[j,j]
@@ -66,29 +68,17 @@ E_fun.prob= function(rankIndex_list, mu_e, Sig_e, Omg_e,
       j_c = j_c + 1
       if (j_c>p)
       {
-        zmat[j_k,] = z
+        zm = zm + z/restore_num
+        zc = zc + z%*%t(z)/restore_num
         j_c = 1
         j_k = j_k + 1
       }
     }
-    zmat_mean[i,] = colMeans(zmat)
-    zmat_cov[[i]] = (t(zmat)%*%zmat)/restore_num
+    Ez = Ez + zm*freq_v[i]
+    Covz = Covz + zc*freq_v[i]
   }
-  
-  Ez = matrix(0, n, p)
-  Covz = vector(mode = 'list', length = n)
-  for (i in 1:length(rank_id))
-  {
-    idx = which(rank_index == i)
-    for (j in idx)
-    {
-      Ez[j,] = zmat_mean[i,]
-      Ez[j,p] = 0
-      tmp = zmat_cov[[i]]
-      tmp[,p] = 0 ; tmp[p,] = 0 ; tmp[p,p] = 1
-      Covz[[j]] = tmp
-    }
-  }
+  Ez[p] = 0
+  Covz[,p] = 0 ; Covz[p,] = 0 ; Covz[p,p] = 1
   return(list(Ez = Ez, Covz = Covz))
 }
 
