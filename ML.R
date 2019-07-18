@@ -11,14 +11,14 @@ if (!require(truncnorm)) {install.packages("truncnorm") ; library(truncnorm)}
 source("./lib/conv.R")
 source("./lib/em_lib.R")
 p = 5
-mu = seq(5,0, length = p)
+mu = seq(2,0, length = p)
 Sigma = matrix(0.5, p, p)
 Sigma[,p] =  Sigma[p,] = 0
 diag(Sigma) = 1 
 
 n = 100
 burn_num = 1e+2
-restore_num = 5e+4
+restore_num = 5e+2
 verbose = F
 #set.seed(1)
 z = mvrnorm(n, mu, Sigma)
@@ -52,7 +52,12 @@ for (iter in 1:100)
   }
   Sig_e = Sig_e/n
   Sig_e = Sig_e - mu_e%*%t(mu_e)
+  Sig_e[1,-1] = Sig_e[1,-1]/sqrt(Sig_e[1,1])
+  Sig_e[-1,1] = Sig_e[-1,1]/sqrt(Sig_e[1,1])
+  Sig_e[1,1] = 1
   Omg_e = solve(Sig_e)
+  cat("me:", mu_e, '\n')  
   cat("Frobenius norm:", sum((Sigma-Sig_e)^2), '\n')
+  print(Sig_e)
 }
 

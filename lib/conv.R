@@ -43,6 +43,12 @@ rankIndex_fun = function(pi_mat)
               freq_v = freq_v))
 }
 
+# observed likkelihood
+# z = mvrnorm(1e+5, mu_e, Sig_e)
+# pi_mat =t(apply(z, 1, order, decreasing = T))
+# rankIndex_list = rankIndex_fun(pi_mat)
+# rankIndex_list$rank_id
+
 # genDesignR_fun
 # input: number of items to be ranked
 # output: design matrix for glmnet or glm
