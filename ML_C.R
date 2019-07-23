@@ -10,6 +10,7 @@ library(RcppArmadillo)
 library(doParallel)
 library(foreach)
 sourceCpp('./lib/test.cpp')
+
 timesTwo(1)
 numCores = 4
 registerDoParallel(numCores)  # use multicore, set to the number of our cores
