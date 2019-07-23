@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563893685726.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "278B2D59",
+    "lastKnownWriteTime" : 1499090631,
+    "last_content_update" : 1499090631,
+    "path" : "C:/Users/Jeon/Desktop/test/R/rtn.R",
+    "project_path" : "R/rtn.R",
+    "properties" : {
+        "cursorPosition" : "53,3",
+        "scrollLine" : "52"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

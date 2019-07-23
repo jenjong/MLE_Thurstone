@@ -1,0 +1,3 @@
+import(Rcpp)
+useDynLib(RcppTN, rtnRcpp, .registration = TRUE)
+export(rtn)
