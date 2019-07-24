@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1563977454061.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2173295224",
+    "id" : "1BBFAE5E",
+    "lastKnownWriteTime" : 1563847413,
+    "last_content_update" : 1563847413,
+    "path" : "~/GitHub/MLE_Thurstone/lib/em_lib.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "51,40",
+        "scrollLine" : "36"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
