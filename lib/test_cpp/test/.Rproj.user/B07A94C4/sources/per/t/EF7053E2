@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564045273439.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1442037332",
+    "id" : "EF7053E2",
+    "lastKnownWriteTime" : 1563937873,
+    "last_content_update" : 1563937873,
+    "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test/src/rtn.h",
+    "project_path" : "src/rtn.h",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "h"
+}

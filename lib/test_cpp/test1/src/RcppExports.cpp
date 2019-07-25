@@ -63,6 +63,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rtnRcpp
+Rcpp::NumericVector rtnRcpp(Rcpp::NumericVector mean, ///containing the mean of the 					 ///distribution for each draw 					 ///[real number]  					Rcpp::NumericVector sd, ///containing the standard 				       ///deviation for each draw 				       ///[strictly positive real 				       ///number] 				  Rcpp::NumericVector low, ///containing the lower bound 					///for each draw [real number 					///or '-Inf'] 					Rcpp::NumericVector high  					///containing the upper bound 					///for each draw [real number 					///or 'Inf']);
+RcppExport SEXP _test1_rtnRcpp(SEXP meanSEXP, SEXP sdSEXP, SEXP lowSEXP, SEXP 'Inf']SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type mean(meanSEXP);
+    Rcpp::traits::input_parameter< ///containing the mean of the 					 ///distribution for each draw 					 ///[real number]  					Rcpp::NumericVector >::type sd(sdSEXP);
+    Rcpp::traits::input_parameter< ///containing the standard 				       ///deviation for each draw 				       ///[strictly positive real 				       ///number] 				  Rcpp::NumericVector >::type low(lowSEXP);
+    Rcpp::traits::input_parameter< ///containing the lower bound 					///for each draw [real number 					///or '-Inf'] 					Rcpp::NumericVector high  					///containing the upper bound 					///for each draw [real number 					///or >::type 'Inf']('Inf']SEXP);
+    rcpp_result_gen = Rcpp::wrap(rtnRcpp(mean, sd, low, 'Inf']));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_test1_rcpparma_hello_world", (DL_FUNC) &_test1_rcpparma_hello_world, 0},
@@ -70,6 +84,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_test1_rcpparma_innerproduct", (DL_FUNC) &_test1_rcpparma_innerproduct, 1},
     {"_test1_rcpparma_bothproducts", (DL_FUNC) &_test1_rcpparma_bothproducts, 1},
     {"_test1_mycall", (DL_FUNC) &_test1_mycall, 4},
+    {"_test1_rtnRcpp", (DL_FUNC) &_test1_rtnRcpp, 4},
     {NULL, NULL, 0}
 };
 

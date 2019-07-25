@@ -12,8 +12,8 @@
     "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test/src/rtnRcpp.cpp",
     "project_path" : "src/rtnRcpp.cpp",
     "properties" : {
-        "cursorPosition" : "10,16",
-        "scrollLine" : "6"
+        "cursorPosition" : "10,15",
+        "scrollLine" : "0"
     },
     "relative_order" : 5,
     "source_on_save" : false,

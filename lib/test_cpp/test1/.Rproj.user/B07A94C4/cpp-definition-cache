@@ -1,0 +1,146 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 11,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 18,
+                "name" : "rcpparma_hello_world",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_hello_world#"
+            },
+            {
+                "column" : 11,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 30,
+                "name" : "rcpparma_outerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_outerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 38,
+                "name" : "rcpparma_innerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_innerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 12,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 47,
+                "name" : "rcpparma_bothproducts(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_bothproducts#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 12,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 54,
+                "name" : "mycall(const arma::colvec &, const arma::mat &, double &, const Rcpp::List &)",
+                "parent_name" : "",
+                "usr" : "c:@F@mycall#&1$@N@arma@C@Col>#d#&1$@N@arma@C@Mat>#d#&d#&1$@N@Rcpp@C@Vector>#VI19#@N@Rcpp@CT>1#T@PreserveStorage#"
+            }
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+        "file_last_write" : 1564047512
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 6,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn.cpp",
+                "kind" : 6,
+                "line" : 13,
+                "name" : "rtn(Rcpp::NumericVector &, Rcpp::NumericVector &, Rcpp::NumericVector &, Rcpp::NumericVector &, Rcpp::NumericVector &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rtn#&$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#"
+            }
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn.cpp",
+        "file_last_write" : 1564049351
+    },
+    {
+        "definitions" : [
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn.h",
+        "file_last_write" : 1563937873
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 13,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+                "kind" : 6,
+                "line" : 11,
+                "name" : "CheckSimple(const double, const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@CheckSimple#1d#1d#"
+            },
+            {
+                "column" : 15,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+                "kind" : 6,
+                "line" : 32,
+                "name" : "UseAlg1(const double, const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@UseAlg1#1d#1d#"
+            },
+            {
+                "column" : 15,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+                "kind" : 6,
+                "line" : 64,
+                "name" : "UseAlg2(const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@UseAlg2#1d#"
+            },
+            {
+                "column" : 15,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+                "kind" : 6,
+                "line" : 106,
+                "name" : "UseAlg3(const double, const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@UseAlg3#1d#1d#"
+            },
+            {
+                "column" : 8,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+                "kind" : 6,
+                "line" : 163,
+                "name" : "rtn1(const double, const double, const double, const double)",
+                "parent_name" : "",
+                "usr" : "c:@F@rtn1#1d#1d#1d#1d#"
+            }
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.cpp",
+        "file_last_write" : 1563937873
+    },
+    {
+        "definitions" : [
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtn1.h",
+        "file_last_write" : 1563937873
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 21,
+                "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtnRcpp.cpp",
+                "kind" : 6,
+                "line" : 11,
+                "name" : "rtnRcpp(Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@rtnRcpp#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#"
+            }
+        ],
+        "file" : "C:/Users/Jeon/Documents/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rtnRcpp.cpp",
+        "file_last_write" : 1564048900
+    }
+]

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564046261374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1291300218",
+    "id" : "7C073D37",
+    "lastKnownWriteTime" : 1564047512,
+    "last_content_update" : 1564047512972,
+    "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test1/src/rcpparma_hello_world.cpp",
+    "project_path" : "src/rcpparma_hello_world.cpp",
+    "properties" : {
+        "cursorPosition" : "52,19",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

@@ -12,6 +12,8 @@
     "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test/src/RcppExports.cpp",
     "project_path" : "src/RcppExports.cpp",
     "properties" : {
+        "cursorPosition" : "18,47",
+        "scrollLine" : "9"
     },
     "relative_order" : 4,
     "source_on_save" : false,

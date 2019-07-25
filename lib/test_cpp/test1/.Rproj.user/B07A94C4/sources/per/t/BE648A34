@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564045822906.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3146312242",
+    "id" : "BE648A34",
+    "lastKnownWriteTime" : 1564049468,
+    "last_content_update" : 1564049505131,
+    "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test1/R/RcppExports.R",
+    "project_path" : "R/RcppExports.R",
+    "properties" : {
+        "cursorPosition" : "25,25",
+        "scrollLine" : "13"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

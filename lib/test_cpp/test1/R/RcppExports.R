@@ -21,3 +21,7 @@ mycall <- function(x, y, i, z) {
     .Call(`_test1_mycall`, x, y, i, z)
 }
 
+rtnRcpp <- function(mean, sd, low, 'Inf']) {
+    .Call(`_test1_rtnRcpp`, mean, sd, low, 'Inf'])
+}
+
