@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564066255703.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1640193894",
+    "id" : "9FDE95CA",
+    "lastKnownWriteTime" : 1511260614,
+    "last_content_update" : 1511260614,
+    "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test/src/rtn.cpp",
+    "project_path" : "src/rtn.cpp",
+    "properties" : {
+        "cursorPosition" : "13,35",
+        "scrollLine" : "9"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

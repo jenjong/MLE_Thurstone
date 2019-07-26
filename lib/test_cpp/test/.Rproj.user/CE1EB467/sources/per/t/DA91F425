@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564066169543.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2766914647",
+    "id" : "DA91F425",
+    "lastKnownWriteTime" : 1511260614,
+    "last_content_update" : 1511260614,
+    "path" : "~/GitHub/MLE_Thurstone/lib/test_cpp/test/src/check1.cpp",
+    "project_path" : "src/check1.cpp",
+    "properties" : {
+        "cursorPosition" : "22,0",
+        "scrollLine" : "1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}
