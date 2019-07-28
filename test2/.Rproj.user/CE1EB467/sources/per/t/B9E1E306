@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564233701438.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1660637463",
+    "id" : "B9E1E306",
+    "lastKnownWriteTime" : 1564321833,
+    "last_content_update" : 1564321833589,
+    "path" : "C:/Users/Jeon/Desktop/test2/src/em_C.cpp",
+    "project_path" : "src/em_C.cpp",
+    "properties" : {
+        "cursorPosition" : "8,10",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

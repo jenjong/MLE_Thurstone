@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564286709659.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2498834253",
+    "id" : "CA4AF85F",
+    "lastKnownWriteTime" : 1564321840,
+    "last_content_update" : 1564321840,
+    "path" : "C:/Users/Jeon/Desktop/test2/R/RcppExports.R",
+    "project_path" : "R/RcppExports.R",
+    "properties" : {
+        "cursorPosition" : "11,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
