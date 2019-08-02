@@ -6,8 +6,8 @@ if (Sys.info()[1]=="Linux")
   setwd("~/GitHub/MLE_Thurstone")
 }
 source("./lib/pack.R")
-library(test2)
-p = 3
+library(mlThurstone)
+p = 5
 mu = seq(2,0, length = p)
 Sigma = matrix(0.5, p, p)
 Sigma[,p] =  Sigma[p,] = 0
@@ -18,7 +18,7 @@ burn_num = 1e+2
 restore_num = 5e+3
 parallel = T
 verbose = F
-numCores = 6
+numCores = 4
 
 if (parallel == T) registerDoParallel(numCores) 
 set.seed(1)
@@ -40,10 +40,10 @@ Sig_e = diag(1,p)
 Omg_e = solve(Sig_e)
 # sampling function
 system.time({
-  for (iter in 1:4)
+  for (iter in 1:1000)
   {
     cat("outer iter:", iter ,'\n')
-    E_fit = E_fun.prob(pi_mat, rankIndex_list, mu_e, Sig_e, Omg_e,
+    E_fit = E_fun.prob_C(pi_mat, rankIndex_list, mu_e, Sig_e, Omg_e,
                        burn_num, restore_num, parallel, verbose)
     mu_e = E_fit$Ez
     Sig_e = E_fit$Covz
@@ -51,6 +51,10 @@ system.time({
     Sig_e[1,-1] = Sig_e[1,-1]/sqrt(Sig_e[1,1])
     Sig_e[-1,1] = Sig_e[-1,1]/sqrt(Sig_e[1,1])
     Sig_e[1,1] = 1
+    ### start:sparse coding
+    
+    
+    ### end:sparse coding
     Omg_e = solve(Sig_e)
     cat("me:", mu_e, '\n')
     cat("Frobenius norm:", sum((Sigma-Sig_e)^2), '\n')
